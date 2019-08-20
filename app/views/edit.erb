@@ -5,23 +5,34 @@
     <title>New</title>
   </head>
   <body>
-    <form action="/articles/<%= @article.id %>" method="post">
-      <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <div>
+      <form action="/articles/<%= @article.id %>" method="post">
+        <input id="hidden" type="hidden" name="_method" value="PATCH">
 
-      <div>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="<%= @article.title %>">
-      </div>
+        <div>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" value="<%= @article.title %>">
+        </div>
 
-      <div>
-        <label for="content">Content</label>
-        <textarea name="content" rows="8" cols="80"><%= @article.content %></textarea>
-      </div>
+        <div>
+          <label for="content">Content</label>
+          <textarea name="content" rows="8" cols="80"><%= @article.content %></textarea>
+        </div>
 
-      <div>
-        <button type="submit" name="submit">Submit</button>
-      </div>
+        <div>
+          <button type="submit" name="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div>
+      <form action="/articles/<%= @article.id %>" method="post">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
 
-    </form>
+
+
+      </form>
+
+    </div>
+
   </body>
 </html>
